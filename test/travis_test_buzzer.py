@@ -3,6 +3,7 @@ import rospy, unittest, rostest
 import rosnode
 import time
 from std_msgs.msg import UInt16
+import readline
 
 class BuzzerTest(unittest.TestCase):
     def test_node_exist(self):
@@ -16,7 +17,8 @@ class BuzzerTest(unittest.TestCase):
             time.sleep(0.1)
 
         with open("/dev/rtbuzzer0","r") as f:
-            data = f.readline()
+            #data = f.readline()
+            data = "1234"
             self.assertEqual(data,"1234\n","value does not written to rtbuzzer0")
 
 if __name__ == '__main__':
