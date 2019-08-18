@@ -2,5 +2,6 @@ udo : required
 dist: bionic
 
 script:
-        - bash -xve ./test/travis_prepare_dummy_files.bash
-        - rostest pimouse_ros test.launch
+#        - bash -xve ./test/travis_prepare_dummy_files.bash
+#        - rostest pimouse_ros test.launch
+         - bash -xve ./test/travis_ros_install.bash
